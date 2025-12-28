@@ -19,7 +19,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model,
-                       @RequestParam(value = "search", required = false) String search,
+                       @RequestParam(value = "search", required = false, defaultValue = "") String search,
                        @RequestParam(value = "categoryId", required = false) Integer categoryId,
                        @RequestParam(value = "page", defaultValue = "0") int page,
                        @RequestParam(value = "size", defaultValue = "6") int size) { // 6 produits par page par défaut
